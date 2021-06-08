@@ -2,10 +2,13 @@ import FormView from '../views/FormView.js'
 import ResultView from '../views/ResultView.js'
 import TabView from '../views/TabView.js'
 import KeywordView from '../views/KeywordView.js'
+import HistoryView from '../views/HistoryView.js'
+
 
 import SearchModel from '../models/SearchModel.js'
 import KeywordModel from '../models/KeywordModel.js'
-
+import HistoryModel from '../models/HistoryModel.js'
+       
 
 const tag = '[MainController]'
 
@@ -24,6 +27,9 @@ export default {
     .on('@click', e => this.onClickKeyword(e.detail.keyword))
 
 
+    HistoryView.setup(document.querySelector('#search-history'))
+    .on('@click', e => this.onClickHistory(e.detail.keyword))
+    .on('@remove', e => this.removeHistory(e.detail.keyword))
 
     ResultView.setup(document.querySelector('#search-result'))
 
@@ -36,20 +42,29 @@ export default {
     TabView.setActiveTab(this.selectedTab)
 
     if (this.selectedTab === '추천 검색어' ) {
+      HistoryView.hide()
+
       KeywordModel.list().then(data => {
         KeywordView.render(data)
       })
       
     } else {
       console.log("최근 검색어")
+      KeywordView.hide()
+      
+      HistoryModel.list().then(data => {
+        const temp = HistoryView.render(data)
+        temp.bindRemoveBtn()
+      })
+
     }
-
-
 
     ResultView.hide()
   },
 
   search(query) {
+    // 최근 검색어 add
+    HistoryModel.add(query)
 
     // Api 호출
     SearchModel.list(query).then(data => {
@@ -70,6 +85,7 @@ export default {
   onSearchResult(data) {
     TabView.hide()
     KeywordView.hide()
+    HistoryView.hide()
     ResultView.render(data)
   },
 
@@ -81,6 +97,17 @@ export default {
   onClickKeyword (keyword) {
     this.search(keyword)
     FormView.setValue(keyword)
-  }
+  },
+
+  onClickHistory (keyword) {
+    this.search(keyword)
+    FormView.setValue(keyword)
+  },
+
+  removeHistory (keyword) {
+    console.log("keyword", keyword)
+    HistoryModel.remove(keyword)
+    this.renderView()
+  },
 
 }

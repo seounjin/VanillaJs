@@ -21,6 +21,7 @@ export default {
   },
   
   remove(keyword) {
+    
     this.data = this.data.filter(item => item.keyword !== keyword)
   }
 }

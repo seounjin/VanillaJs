@@ -15,7 +15,7 @@ KeywordView.render = function (data = []) {
     this.show()
     this.bindClickEvent()
     return this
-  }
+}
   
 
 KeywordView.getKeywordsHtml = function (data) {
@@ -32,7 +32,7 @@ KeywordView.bindClickEvent = function() {
     Array.from(this.el.querySelectorAll('li')).forEach(li => {
       li.addEventListener('click', e => this.onClickKeyword(e))
     })
-  }
+}
   
 KeywordView.onClickKeyword = function (e) {
     const {keyword} = e.currentTarget.dataset
