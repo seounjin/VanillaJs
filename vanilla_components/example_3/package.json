@@ -1,0 +1,9 @@
+{
+
+    "scripts": {
+    
+    "dev": "live-server"
+    
+    }
+    
+}
