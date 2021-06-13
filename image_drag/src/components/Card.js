@@ -5,8 +5,6 @@ export default class Card {
     constructor(element, data) {
         this.element = element;
         this.data = data;
-
-        console.log("확인CARD", this.data )
         this.setup()
         this.render();
     };
