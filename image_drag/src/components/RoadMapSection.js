@@ -9,35 +9,62 @@ export default class RoadMapSection extends Section {
 
 
     setup () {
-        //타이틀, 그림 가져오기
-        const temp = {}
-        new ArrowSection(this.element.querySelector('.arrow-container'), temp);
-
-        this.setRoadMapCard();
+        this.setRoadMapContainer();
     }
 
+    callBack () {
+        console.log("콜백")
+    }
+
+    setRoadMapContainer () {
+
+        roadMapCardApi.roadMapCardList().then( data => {
+            
+            data.map( item => {
+                
+                const inner = this.element.querySelector('.inner');
+                const roadMapContainer = document.createElement('div');
+                roadMapContainer.classList.add('roadmap-container');
+                inner.appendChild(roadMapContainer);
+
+                const titleContainer = document.createElement('div');
+                titleContainer.classList.add('roadmap-title-container');
+                roadMapContainer.appendChild(titleContainer);
+                
+                const roadMapTitle =  document.createElement('div');
+                roadMapTitle.classList.add('roadmap-title');
+                roadMapTitle.innerHTML = item.title;
+
+                const arrowContainer = document.createElement('div');
+                arrowContainer.classList.add('arrow-container');
+
+                titleContainer.appendChild(roadMapTitle);
+                titleContainer.appendChild(arrowContainer);
+                
+                
+                new ArrowSection(arrowContainer, this.callBack);
+        
+
+                const CardListElement = document.createElement('div');
+                CardListElement.classList.add('class-list-container');
+                roadMapContainer.appendChild(CardListElement);
+
+                new RoadMapCard(CardListElement, item.info);
+               
+                
+            })
 
 
-    setRoadMapCard () {
-        roadMapCardApi.roadMapCardList().then(data => {
-            new RoadMapCard(this.element.querySelector('.class-list-container'), data);
+            
         })
+
     }
+
 
     template () { 
 
         return `
             <div class="inner">
-                <div class="roadmap-container">
-                
-                    <div class="roadmap-title-container">
-                            <div class="roadmap-title">스크린샷</div>
-                            <div class="arrow-container"></div>
-                    </div>
-                
-                    <div class="class-list-container"></div>
-                    
-                </div>
             </div>
         `;
      };

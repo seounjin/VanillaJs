@@ -33,7 +33,9 @@ export default class App extends Component {
 
   // 자식 컴포넌트 마운트
   mounted () {
+
     const { filteredItems, addItem, deleteItem, toggleItem, filterItem } = this;
+
     const $itemAppender = this.$target.querySelector('[data-component="item-appender"]');
     const $items = this.$target.querySelector('[data-component="items"]');
     const $itemFilter = this.$target.querySelector('[data-component="item-filter"]');

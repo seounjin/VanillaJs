@@ -169,6 +169,8 @@ section {
 .class-list {
     display: flex;
     list-style: none;
+    padding: 1rem 0;
+    margin: 0;
 }
 
 .class-card {
@@ -185,9 +187,44 @@ section {
 
 .class-container {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem 0.5rem 0.5rem; 
+}
+
+.class-list-container {
+    display: flex;
+    overflow: hidden;
+}
+
+footer {
+    border-top: 1px solid #e4e4e4;
+    background-color: #f8f9fa;
+    margin: 1rem 0;
+    padding: 1rem 0;
+}
+
+.footer-message {
+    font-weight: bold;
+    color: #545e6f;
+    margin: 0.3rem 0.5rem;
+}
+
+.footer-contact {
+    color: #545e6f;
+    margin: 0 0.5rem;
+}
+
+.footer-source {
+    color: #545e6f;
+    margin: 1rem 0.5rem;  
 }
 
 
+/* li:hover {
+    cursor: pointer;
+} */
 
 @media only screen and (min-width: 1200px) {
     .inner {
