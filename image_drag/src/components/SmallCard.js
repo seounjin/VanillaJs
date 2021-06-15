@@ -1,13 +1,14 @@
-import Card from "./Card.js"
+import View from "./View.js"
 
 
-export default class SmallCard extends Card {
+export default class SmallCard extends View {
 
     
     template () {
-  
+        
+        const { smallCard } = this.data;
 
-        return this.data.reduce((html, item) => {
+        return smallCard.reduce((html, item) => {
 
             html += `   <div class="character">
                             <img src=${item.img} class="character-icon">

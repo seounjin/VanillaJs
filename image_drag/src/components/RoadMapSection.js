@@ -1,20 +1,17 @@
-import Section from '../components/Section.js';
+import View from '../components/View.js';
 import ArrowSection from '../components/ArrowSection.js';
 import roadMapCardApi from '../api/roadMapCardApi.js';
 import RoadMapCard from '../components/RoadMapCard.js';
 
 
-export default class RoadMapSection extends Section {
+export default class RoadMapSection extends View {
 
 
 
-    setup () {
+    mount () {
         this.setRoadMapContainer();
     }
 
-    callBack () {
-        console.log("콜백")
-    }
 
     setRoadMapContainer () {
 
@@ -41,15 +38,14 @@ export default class RoadMapSection extends Section {
                 titleContainer.appendChild(roadMapTitle);
                 titleContainer.appendChild(arrowContainer);
                 
-                
-                new ArrowSection(arrowContainer, this.callBack);
-        
 
                 const CardListElement = document.createElement('div');
                 CardListElement.classList.add('class-list-container');
                 roadMapContainer.appendChild(CardListElement);
 
-                new RoadMapCard(CardListElement, item.info);
+                new ArrowSection(arrowContainer);
+
+                new RoadMapCard(CardListElement, { data: item.info });
                
                 
             })
@@ -58,8 +54,11 @@ export default class RoadMapSection extends Section {
             
         })
 
-    }
+    };
 
+    arrowEvent() {
+
+    };
 
     template () { 
 
@@ -69,4 +68,4 @@ export default class RoadMapSection extends Section {
         `;
      };
 
-}
+};

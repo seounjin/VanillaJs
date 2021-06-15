@@ -1,17 +1,17 @@
 import smallCardApi from '../api/smallCardApi.js';
 import SmallCard from '../components/SmallCard.js';
-import Section from '../components/Section.js';
+import View from '../components/View.js';
 
-export default class SmallCardSection extends Section {
+export default class SmallCardSection extends View {
     
     
-    setup () {
+    mount () {
         this.setCardList();
     }
 
     setCardList () {
         smallCardApi.smallCardList().then(data => {
-            new SmallCard(this.element.querySelector('.character-container'), data);
+            new SmallCard(this.element.querySelector('.character-container'), { smallCard:data });
         })
     }
 

@@ -1,11 +1,14 @@
-import Card from "./Card.js"
+import View from "./View.js"
 
 
-export default class RoadMapCard extends Card {
+export default class RoadMapCard extends View {
 
     
     template () { 
-            return this.data.reduce((html, item) => {
+
+            const { data } = this.data;
+
+            return data.reduce((html, item) => {
                 html += `
                             <li class="class-card">
                                 <img src=${item.img} class="class-image">
@@ -21,8 +24,8 @@ export default class RoadMapCard extends Card {
 
                     return html;
 
-                }, '<ul class="class-list">') + '</ul>';
+                }, '<ul class="class-list" data-position="0">') + '</ul>';
     };
 
    
-}
+};

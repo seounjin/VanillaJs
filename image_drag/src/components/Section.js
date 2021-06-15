@@ -5,7 +5,6 @@ export default class Section {
     
     constructor(element) {
         this.element = element;
-        
         this.render();
         this.setup()
         
