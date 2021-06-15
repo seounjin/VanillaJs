@@ -177,13 +177,15 @@ section {
 
 .class-card {
     width: 240px;
+    
     box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
     border-radius: 8px;
     margin: 0 10px;
 }
 
 .class-image {
-    width: 100%;
+    max-width: 240px;
+    max-height: 240px;
     border-radius: 8px 8px 0 0;
 }
 

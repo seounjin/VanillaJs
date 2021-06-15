@@ -16,13 +16,13 @@ const data =[
                 ]},
 
     {
-        'title': '펜아트',
+        'title': '팬아트',
         'info' : [
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
                     { exp:'알리사', img:'http://localhost:3000/img/white.png'},
                     { exp:'알리사', img:'http://localhost:3000/img/white.png'},
                     { exp:'알리사', img:'http://localhost:3000/img/white.png'},
-                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
-                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
                     { exp:'알리사', img:'http://localhost:3000/img/white.png'}
                 ]}
 ];
