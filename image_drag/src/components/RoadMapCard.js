@@ -11,12 +11,10 @@ export default class RoadMapCard extends View {
             return data.reduce((html, item) => {
                 html += `
                             <li class="class-card">
-                                <img src=${item.img} class="class-image">
-                                <div class="class-container">
-                                    <div class="class-exp">${item.exp}</div>
-                                    <div>임시</div>
-                                            
-
+                                <img class="class-image" data-src=${item.img} >
+                                <div class="clss-container">
+                                    <div class="class-exp" data-exp=${item.exp}></div>
+                                    
                                 </div>
                             </li>
                         
@@ -29,3 +27,5 @@ export default class RoadMapCard extends View {
 
    
 };
+
+

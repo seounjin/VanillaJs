@@ -19,12 +19,56 @@ const data =[
         'title': '팬아트',
         'info' : [
                     { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
-                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
-                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
-                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
                     { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'}
+                ]},
+    {
+        'title': '팬아트',
+        'info' : [
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'}
+                ]},
+    
+    {
+        'title': '팬아트',
+        'info' : [
+                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
+                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
+                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
+                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
+                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
+                    { exp:'알리사', img:'http://localhost:3000/img/white.png'}
+                ]},
+    {
+        'title': '팬아트',
+        'info' : [
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'},
+                    { exp:'아이린', img:'http://localhost:3000/img/Irene1.png'}
+                ]},
+
+                
+    {         
+        'title': '팬아트',
+        'info' : [
+                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
+                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
+                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
+                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
+                    { exp:'알리사', img:'http://localhost:3000/img/white.png'},
                     { exp:'알리사', img:'http://localhost:3000/img/white.png'}
                 ]}
+
 ];
 
 
@@ -34,7 +78,7 @@ export default {
         return new Promise(res => {
             setTimeout(() => {
                 res(data)
-            }, 200)
+            }, 300)
         })
     }
 

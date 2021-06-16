@@ -7,11 +7,9 @@ import RoadMapCard from '../components/RoadMapCard.js';
 export default class RoadMapSection extends View {
 
 
-
     mount () {
         this.setRoadMapContainer();
     }
-
 
     setRoadMapContainer () {
 
@@ -47,18 +45,61 @@ export default class RoadMapSection extends View {
 
                 new RoadMapCard(CardListElement, { data: item.info });
                
-                
             })
 
-
+            
+            this.lazyLoadObserver();
             
         })
 
     };
 
-    arrowEvent() {
+    lazyLoadObserver() {
+        
+            const callBack = (entries, observer) => {
+                
+                entries.forEach(entry => {
+
+                    //isIntersecting 해당 엘리먼트가 보이는지 표시
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+                    
+
+
+                    // 해당 엘리먼트 해제
+                    observer.unobserve(entry.target);
+
+
+                    //엘리먼트가 보이는 상태일 경우 이미지 로딩
+                    const target = Array.from(entry.target.querySelectorAll('li'));
+                    target.forEach(element => {
+                        const classImage = element.querySelector('.class-image');
+                        const classExp = element.querySelector('.class-exp')
+
+
+                        classImage.src = classImage.dataset.src;
+                        classExp.innerText = classExp.dataset.exp;
+
+                    })        
+                    
+                });
+
+            };
+        
+        
+        const io = new IntersectionObserver(callBack);
+        //엘리먼트 등록roadmap-container
+        const classdListContainer = Array.from(document.getElementsByClassName('class-list-container'));
+
+       
+        classdListContainer.forEach( element => {
+            io.observe(element);
+        })
+
 
     };
+
 
     template () { 
 
@@ -69,3 +110,7 @@ export default class RoadMapSection extends View {
      };
 
 };
+
+
+
+
