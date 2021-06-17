@@ -49,10 +49,7 @@ export default class ArrowSection extends View{
             const classListContainer = event.target.parentElement.parentElement.nextElementSibling;
             const classList = classListContainer.childNodes[0];
             let dataPosition = classList.getAttribute('data-position');
-
-            console.log("dataPosition",dataPosition)
-            //li 길이 (카드 갯수)
-            const liList = classList.getElementsByTagName('li');
+            
             
             if (Number(dataPosition) < 0) {
                 dataPosition = Number(dataPosition) + 260;

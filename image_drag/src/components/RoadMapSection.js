@@ -89,7 +89,7 @@ export default class RoadMapSection extends View {
         
         
         const io = new IntersectionObserver(callBack);
-        //엘리먼트 등록roadmap-container
+        //엘리먼트 class-list-container
         const classdListContainer = Array.from(document.getElementsByClassName('class-list-container'));
 
        

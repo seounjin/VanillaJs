@@ -1,8 +1,28 @@
-import View from "./View.js"
-
+import View from "./View.js";
+import CardModal from "./CardModal.js";
 
 export default class RoadMapCard extends View {
 
+    closeModal() {
+        const modal = document.querySelector('.modal-wrapper');
+        modal.remove();
+    }
+
+    setEvent () {
+
+        const classList = this.element.querySelector('.class-list');
+        
+        classList.addEventListener('click', ( event => {
+
+            if (event.target.dataset.src){
+                new CardModal(event.target.dataset.src);
+            }
+            
+
+        }));
+        
+        
+    }
     
     template () { 
 
