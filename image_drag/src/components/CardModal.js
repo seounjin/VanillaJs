@@ -34,7 +34,7 @@ export default class CardModal{
         const modalTitle = document.createElement('div');
         modalTitle.className = 'modal-title';
         modalTitle.innerText = '제목';
-        
+                
         const closeButton = document.createElement('i');
         closeButton.className = 'far fa-times-circle modal-close';
 
@@ -45,6 +45,9 @@ export default class CardModal{
         const modalExp = document.createElement('div');
         modalExp.className = 'modal-exp';
 
+        overlay.addEventListener("click", () => {
+            this.closeModal();
+        });
 
         closeButton.addEventListener('click', () => {
             this.closeModal();

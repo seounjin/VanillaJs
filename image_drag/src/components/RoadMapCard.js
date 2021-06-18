@@ -15,13 +15,13 @@ export default class RoadMapCard extends View {
         classList.addEventListener('click', ( event => {
 
             if (event.target.dataset.src){
-                new CardModal(event.target.dataset.src);
+                new CardModal(event.target.dataset.src);            
             }
-            
 
         }));
         
-        
+
+
     }
     
     template () { 

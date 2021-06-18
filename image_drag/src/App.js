@@ -11,8 +11,17 @@ export default class App {
 
         new RoadMapSection(this.element.querySelector('.section-roadmap'));
 
+        this.setEvent();
     };
+    
 
-
+    setEvent () {
+        const backToTop = document.getElementById('backtotop');
+        backToTop.addEventListener('click', ()=>{
+            if (window.pageYOffset > 0) {
+                window.scrollTo({top: 0 })
+            }
+        });
+    }
 
 }
