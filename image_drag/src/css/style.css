@@ -290,9 +290,12 @@ footer {
     width: 100%;
 }
 
-.modal-exp {
-
-}
+.modal-Like-Dislike {
+    justify-content: flex-end;
+    /* margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto; */
+}   
 
 .class-image:hover {
     cursor: pointer;

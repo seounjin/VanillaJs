@@ -20,8 +20,6 @@ export default class RoadMapCard extends View {
 
         }));
         
-
-
     }
     
     template () { 

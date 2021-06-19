@@ -1,4 +1,4 @@
-
+import LikeDislike from './LikeDislike.js'
 
 
 export default class CardModal{
@@ -42,8 +42,8 @@ export default class CardModal{
         modalImage.className = 'modal-image';
         modalImage.src = this.data;
 
-        const modalExp = document.createElement('div');
-        modalExp.className = 'modal-exp';
+        const modalLikeDislike = document.createElement('div');
+        modalLikeDislike.className = 'modal-Like-Dislike';
 
         overlay.addEventListener("click", () => {
             this.closeModal();
@@ -58,13 +58,13 @@ export default class CardModal{
         modalContent.appendChild(modalHeader);
 
         modalContent.appendChild(modalImage);
-        modalContent.appendChild(modalExp); 
+        modalContent.appendChild(modalLikeDislike); 
         
         this.modalWrapper.appendChild(overlay);
         this.modalWrapper.appendChild(modalContent);
 
-        
-    }
+        new LikeDislike(modalLikeDislike);
+    };
     
 
 };

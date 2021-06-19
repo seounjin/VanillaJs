@@ -11,6 +11,7 @@ export default class App {
 
         new RoadMapSection(this.element.querySelector('.section-roadmap'));
 
+        console.log("확인!")
         this.setEvent();
     };
     
