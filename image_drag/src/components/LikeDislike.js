@@ -13,8 +13,8 @@ export default class LikeDislike extends View {
 
     template() {
         return `
-                <i class="far fa-thumbs-up"></i>
-                <i class="far fa-thumbs-down"></i>
+                <i class="far fa-thumbs-up thumb-up"></i>
+                <i class="far fa-thumbs-down thumb-down"></i>
                 `
     
     };
