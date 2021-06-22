@@ -3,15 +3,14 @@ import LikeDislike from './LikeDislike.js'
 
 export default class CardModal{
 
-    constructor (data) {
-
+    constructor (element, data) {
+        this.element = element;
         this.data = data;
         const mainSection = document.querySelector('.main');
         this.modalWrapper = document.createElement('div');
         this.modalWrapper.classList.add('modal-wrapper');
         mainSection.appendChild(this.modalWrapper);
         
-
         this.render();
     }
 
@@ -63,7 +62,7 @@ export default class CardModal{
         this.modalWrapper.appendChild(overlay);
         this.modalWrapper.appendChild(modalContent);
 
-        new LikeDislike(modalLikeDislike);
+        new LikeDislike(modalLikeDislike, this.element);
     };
     
 

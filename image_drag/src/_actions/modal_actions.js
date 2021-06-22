@@ -1,7 +1,7 @@
 
+import { TOTAL_UPDATE, CARD_REQUEST } from './types.js';
+import roadMapCardApi from '../api/roadMapCardApi.js';
 
-
-// 스샷 제목, 이미지 경로
 const data = [
 
     {   'num': 1,
@@ -41,14 +41,39 @@ const data = [
 ];
 
 
-export default {
+const temp = () =>
 
-    roadMapCardList () {
-        return new Promise(res => {
-            setTimeout(() => {
-                res(data)
-            }, 300)
+    roadMapCardApi.roadMapCardList()
+        .then(data => { 
+            console.log(data)
+            return data
         })
-    }
+    
 
-}
+export function CardRequest () {
+    
+
+    const request = new Promise((res) => setTimeout(res(data), 3000))
+    
+    
+   
+    console.log("과연");
+
+
+    // const request = roadMapCardApi.roadMapCardList().then( data => {return data})
+    
+    return {
+        type: CARD_REQUEST,
+        payload: data
+    };
+};
+
+export function TotalUpdate(num, cNum) {
+
+    return {
+        type: TOTAL_UPDATE,
+        col: num,
+        row: cNum
+        
+    };
+};
