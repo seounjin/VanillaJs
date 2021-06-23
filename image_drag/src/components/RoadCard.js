@@ -11,7 +11,7 @@ export default class RoadCard {
         this.li.className = 'class-card';
 
         this.element.appendChild(this.li);
-        
+
         this.render();
     };
 

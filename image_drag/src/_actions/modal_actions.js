@@ -41,14 +41,6 @@ const data = [
 ];
 
 
-const temp = () =>
-
-    roadMapCardApi.roadMapCardList()
-        .then(data => { 
-            console.log(data)
-            return data
-        })
-    
 
 export function CardRequest () {
     

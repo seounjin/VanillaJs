@@ -42,7 +42,7 @@ const data = [
 
 
 export default {
-
+    
     roadMapCardList () {
         return new Promise(res => {
             setTimeout(() => {

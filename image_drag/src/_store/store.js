@@ -4,7 +4,7 @@
 export function createStore(reducer) {
 
     let state;
-    
+    const listeners = [];
     //스토어에 상태 저장
     //여러가지 옵저버
     //리듀서 등록
@@ -14,11 +14,15 @@ export function createStore(reducer) {
         
         console.log("action",action)
         state =  reducer(state, action);
-
         console.log("state", state);
+        console.log("listeners", listeners)
+        listeners.forEach(f => { f()});
     };
+
+    const subscribe = f => {
+        listeners.push(f)};
 
     const getState = () => state;
 
-    return { dispatch, getState };
+    return { dispatch, getState, subscribe };
 };
