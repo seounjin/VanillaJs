@@ -5,7 +5,8 @@
 :root {
     --color-mode: "light";
     --color-dark: black;
-    --color-light: white;
+    --color-white: white;
+    --color-yellow: yellow;
     --background: white;
     --text-color: black;
 }
@@ -14,7 +15,7 @@
     :root {
         --color-mode: "dark";
         --background: var(--color-dark);
-        --text-color: var(--color-light);
+        --text-color: var(--color-white);
     }
 }
 
@@ -335,17 +336,43 @@ footer {
 }
 
 
-.section-changebtn{
+.section-changebtn {
     position: fixed;
-    display: flex;
+    width: 140px;
+    height: 45px;
     bottom: 30px;
-    right: 30px;
+    right: 100px;
+    text-align:center;
+    border-radius: 18px;
+    box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+    z-index: 999;
 }
-
 
 .moon-btn {
-
+    line-height: 45px;
 }
+
+
+.wd-text {
+    line-height: 45px;
+}
+
+
+.section-changebtn:hover {
+    cursor: pointer;
+    background-color: var(--color-dark);
+}
+
+
+.section-changebtn:hover > .moon-btn{
+    color: var(--color-yellow);
+}
+
+.section-changebtn:hover > .wd-text{
+    color: var(--color-white);
+}
+
+
 
 #backtotop{
     width: 40px;
