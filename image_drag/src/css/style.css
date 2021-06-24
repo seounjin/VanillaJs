@@ -2,6 +2,25 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-mode: "light";
+    --color-dark: black;
+    --color-light: white;
+    --background: white;
+    --text-color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-mode: "dark";
+        --background: var(--color-dark);
+        --text-color: var(--color-light);
+    }
+}
+
+
+
+
 body {
     margin: 0 auto;
     color: #3f464d;
@@ -313,6 +332,19 @@ footer {
 
 .modal-close:hover {
     cursor: pointer;
+}
+
+
+.section-changebtn{
+    position: fixed;
+    display: flex;
+    bottom: 30px;
+    right: 30px;
+}
+
+
+.moon-btn {
+
 }
 
 #backtotop{

@@ -1,6 +1,6 @@
 import SmallCardSection from './components/SmallCardSection.js';
 import RoadMapSection from './components/RoadMapSection.js';
-
+import ChangeButton from './components/ChangeButton.js'
 
 export default class App {
 
@@ -11,13 +11,15 @@ export default class App {
 
         new RoadMapSection(this.element.querySelector('.section-roadmap'));
 
-        console.log("확인!")
-        this.setEvent();
+        new ChangeButton(this.element.querySelector('.section-changebtn'));
+
+        // this.setEvent();
     };
     
 
     setEvent () {
-        const backToTop = document.getElementById('backtotop');
+        const backToTop = document.getElementById('section-backtotop-changebtn').firstChild.nodeValue;
+
         backToTop.addEventListener('click', ()=>{
             if (window.pageYOffset > 0) {
                 window.scrollTo({top: 0 })

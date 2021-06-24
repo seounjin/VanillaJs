@@ -86,6 +86,5 @@ export default class ArrowSection extends View{
                 <i class="fas fa-chevron-circle-left slide-prev"></i>
                 <i class="fas fa-chevron-circle-right slide-next"></i>
                 `
-    
     }
 }
