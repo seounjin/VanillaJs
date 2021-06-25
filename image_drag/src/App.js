@@ -18,7 +18,7 @@ export default class App {
     
 
     setEvent () {
-        const backToTop = document.getElementById('section-backtotop-changebtn').firstChild.nodeValue;
+        const backToTop = document.getElementById('section-backtotop-changebtn')
 
         backToTop.addEventListener('click', ()=>{
             if (window.pageYOffset > 0) {

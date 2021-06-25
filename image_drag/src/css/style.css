@@ -19,32 +19,41 @@
     }
 }
 
+.dark {
+    --color-mode: "dark";
+    --background: var(--color-dark);
+    --text-color: var(--color-white);
+}
 
-
+.main {
+    background: var(--background);
+    color: var(--text-color);
+}
 
 body {
     margin: 0 auto;
-    color: #3f464d;
+    color: var(--text-color);
     font-family: "Spoqa Han Sans Neo", "Sans-serif";
 }
-
 
 header {
     width: 100%;
     height: 60px;
-    background-color: #fff;
+    background-color: var(--background);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
 }
 
+
+
 .inner {
     width: 100%;
     height: 100%;
     margin: 0 auto;
     padding: 0 2rem;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 
@@ -72,6 +81,10 @@ section {
     position: relative;
 }
 
+.main {
+    background: var(--background);
+}
+
 .main-img {
     height: 360px;
     background-image:url("../../img/troubleshooter.jpg");
@@ -81,7 +94,7 @@ section {
     z-index: 1;
 }
 
-.man-img-container {
+.main-img-container {
     width:100%;
     height:100%;
     background-color:  rgb(47, 48, 89);
@@ -341,8 +354,8 @@ footer {
     width: 140px;
     height: 45px;
     bottom: 30px;
-    right: 100px;
-    text-align:center;
+    right: 100px;   
+    text-align:center;  
     border-radius: 18px;
     box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
     z-index: 999;
@@ -350,10 +363,20 @@ footer {
 
 .moon-btn {
     line-height: 45px;
+    margin-right: 2px;
+}
+
+.dark-text {
+    line-height: 45px;
 }
 
 
-.wd-text {
+.sun-btn {
+    line-height: 45px;
+    margin-right: 1px;
+}
+
+.white-text {
     line-height: 45px;
 }
 
@@ -361,16 +384,17 @@ footer {
 .section-changebtn:hover {
     cursor: pointer;
     background-color: var(--color-dark);
+    color: var(--color-white);
 }
 
 
-.section-changebtn:hover > .moon-btn{
+.section-changebtn:hover > .moon-btn {
     color: var(--color-yellow);
 }
 
-.section-changebtn:hover > .wd-text{
+/* .section-changebtn:hover > .dark-text {
     color: var(--color-white);
-}
+} */
 
 
 
