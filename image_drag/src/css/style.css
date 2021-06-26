@@ -190,13 +190,13 @@ section {
 .slide-prev {
     font-size: 2rem;
     cursor: pointer;
-    color: rgb(47, 48, 89);
+    color: #cfd8dc;
   }
   
 .slide-next {
     font-size: 2rem;
     cursor: pointer;
-    color: #cfd8dc;
+    color: #2f3059;
 }
 
 .arrow-container {
