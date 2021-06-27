@@ -1,5 +1,5 @@
 import View from '../components/View.js';
-import { TotalUpdate } from "../_actions/modal_actions.js"
+import { LikeUpdate, disLikeUpdate } from "../_actions/modal_actions.js"
 
 
 export default class LikeDislike extends View {
@@ -14,22 +14,52 @@ export default class LikeDislike extends View {
             const num = Number(this.data.parentElement.dataset.num);
             const cNum = Number(this.data.dataset.num);
             
-
-            // this.data.querySelector('.class-total').innerHTML = Number(this.data.querySelector('.class-total').innerHTML) + 1
-            const totalModify = () => {
-                const total = window.store.getState().data[num - 1].info[cNum - 1].total
-                this.data.querySelector('.class-total').innerHTML = total
+            //redux 사용
+            const likeEvent = () => {
+                const like = window.store.getState().data[num - 1].info[cNum - 1].like;
+                this.data.querySelector('.class-like').innerHTML = like;
             };
 
             const store = window.store;
             
-            store.subscribe(totalModify);
+            // redux를 거치지 않는 코드
+            // this.data.querySelector('.class-total').innerHTML = Number(this.data.querySelector('.class-total').innerHTML) + 1
 
-            store.dispatch(TotalUpdate(num, cNum));
-            
+            // 등록
+            store.subscribe(likeEvent);
 
+            //dispatch
+            store.dispatch(LikeUpdate(num, cNum));
 
         }));
+        
+        const thumbDown = this.element.querySelector('.thumb-down');
+
+        thumbDown.addEventListener('click', ( event => {
+
+            const num = Number(this.data.parentElement.dataset.num);
+            const cNum = Number(this.data.dataset.num);
+            
+            //redux 사용
+            const disLikeEvent = () => {
+                const disLike = window.store.getState().data[num - 1].info[cNum - 1].dislike;
+                this.data.querySelector('.class-dislike').innerHTML = disLike;
+            };
+
+
+            const store = window.store;
+            
+            // redux를 거치지 않는 코드
+            // this.data.querySelector('.class-total').innerHTML = Number(this.data.querySelector('.class-total').innerHTML) + 1
+
+            // 등록
+            store.subscribe(disLikeEvent);
+
+            //dispatch
+            store.dispatch(disLikeUpdate(num, cNum));
+
+        }));
+
 
     };
 

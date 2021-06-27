@@ -6,10 +6,8 @@ export default class RoadCard {
 
         this.element = element;
         this.data = data;
-
         this.li = document.createElement("li");
         this.li.className = 'class-card';
-
         this.element.appendChild(this.li);
 
         this.render();
@@ -31,9 +29,37 @@ export default class RoadCard {
         classExp.className = 'class-exp';
         classExp.dataset.exp = data.exp;
 
+        // //원본
+        // const classTotal = document.createElement("div");
+        // classTotal.className = 'class-total';
+        // classTotal.dataset.total = data.total;
+
         const classTotal = document.createElement("div");
         classTotal.className = 'class-total';
-        classTotal.dataset.total = data.total;
+        // classTotal.dataset.total = data.total;
+
+        //좋아요
+        const thumbUp = document.createElement("i");
+        thumbUp.className = 'far fa-thumbs-up thumb-up';
+
+        const like = document.createElement("span");
+        like.className = 'class-like';
+        like.dataset.like = data.like;
+
+        
+        //싫어요
+        const thumbDown = document.createElement("i");
+        thumbDown.className = 'far fa-thumbs-down thumb-down';
+
+        const disLike = document.createElement("span");
+        disLike.className = 'class-dislike';
+        disLike.dataset.dislike = data.dislike;
+
+        
+        classTotal.appendChild(thumbUp);
+        classTotal.appendChild(like);
+        classTotal.appendChild(thumbDown);
+        classTotal.appendChild(disLike);
 
         classContainer.appendChild(classExp);
         classContainer.appendChild(classTotal);

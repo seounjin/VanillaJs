@@ -16,6 +16,7 @@ export function createStore(reducer) {
         state =  reducer(state, action);
         console.log("state", state);
         console.log("listeners", listeners)
+        
         listeners.forEach(f => { f()});
     };
 
