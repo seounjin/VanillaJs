@@ -20,6 +20,7 @@ export default class CardModal{
     }
 
     render () {
+        const { img, exp } = this.data;
 
         const overlay = document.createElement('div');
         overlay.className = 'overlay';
@@ -32,14 +33,14 @@ export default class CardModal{
 
         const modalTitle = document.createElement('div');
         modalTitle.className = 'modal-title';
-        modalTitle.innerText = '제목';
+        modalTitle.innerText = exp;
                 
         const closeButton = document.createElement('i');
         closeButton.className = 'far fa-times-circle modal-close';
 
         const modalImage = document.createElement('img');
         modalImage.className = 'modal-image';
-        modalImage.src = this.data;
+        modalImage.src = img;
 
         const modalLikeDislike = document.createElement('div');
         modalLikeDislike.className = 'modal-Like-Dislike';
@@ -50,7 +51,7 @@ export default class CardModal{
 
         closeButton.addEventListener('click', () => {
             this.closeModal();
-        });
+        });img
 
         modalHeader.appendChild(modalTitle);
         modalHeader.appendChild(closeButton);

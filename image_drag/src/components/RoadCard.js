@@ -14,7 +14,6 @@ export default class RoadCard {
     };
 
     render() {
-        console.log("RoadCard")
         const { data } = this.data;
         this.li.dataset.num = data.cNum;
 
