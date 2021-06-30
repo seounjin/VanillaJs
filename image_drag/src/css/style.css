@@ -12,6 +12,8 @@
     --text-color: black;
     --card-color: white;
     --footer-color: white;
+    --changebtn-color:black;
+    --moon-sun-color: yellow;
 }
 
 /* #2c2d30 */
@@ -33,6 +35,8 @@
     --text-color: var(--color-white);
     --card-color: var(--color-gray);
     --footer-color: var(--color-gray);
+    --changebtn-color:#534d4d;
+    --moon-sun-color: green;
 }
 
 .main {
@@ -405,12 +409,17 @@ footer {
 
 .section-changebtn:hover {
     cursor: pointer;
-    background-color: var(--color-dark);
+    background-color: var(--changebtn-color);
     color: var(--color-white);
 }
 
-
+/* --changebtn-color:#d9d9d9;
+    --moon-sun-color: green; */
 .section-changebtn:hover > .moon-btn {
+    color: var(--color-yellow);
+}
+
+.section-changebtn:hover > .sun-btn {
     color: var(--color-yellow);
 }
 
