@@ -51,7 +51,7 @@ export default class CardModal{
 
         closeButton.addEventListener('click', () => {
             this.closeModal();
-        });img
+        });
 
         modalHeader.appendChild(modalTitle);
         modalHeader.appendChild(closeButton);
