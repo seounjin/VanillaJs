@@ -49,8 +49,6 @@ export default class LikeDislike extends View {
 
             const store = window.store;
             
-            // redux를 거치지 않는 코드
-            // this.data.querySelector('.class-total').innerHTML = Number(this.data.querySelector('.class-total').innerHTML) + 1
 
             // 등록
             store.subscribe(disLikeEvent);

@@ -28,14 +28,8 @@ export default class RoadCard {
         classExp.className = 'class-exp';
         classExp.dataset.exp = data.exp;
 
-        // //원본
-        // const classTotal = document.createElement("div");
-        // classTotal.className = 'class-total';
-        // classTotal.dataset.total = data.total;
-
         const classTotal = document.createElement("div");
         classTotal.className = 'class-total';
-        // classTotal.dataset.total = data.total;
 
         //좋아요
         const thumbUp = document.createElement("i");

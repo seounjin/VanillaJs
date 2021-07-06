@@ -81,7 +81,6 @@ export default class RoadMapSection extends View {
                     target.forEach(element => {
                         const classImage = element.querySelector('.class-image');
                         const classExp = element.querySelector('.class-exp');
-                        // const classTotal = element.querySelector('.class-total');
                         
                         const classLike = element.querySelector('.class-like');
                         const classDisLike = element.querySelector('.class-dislike');
@@ -89,7 +88,6 @@ export default class RoadMapSection extends View {
                         classImage.src = classImage.dataset.src;
                         classExp.innerText = classExp.dataset.exp;
 
-                        // classTotal.innerText = classTotal.dataset.total;
 
                         classLike.innerText = classLike.dataset.like;
                         classDisLike.innerText = classDisLike.dataset.dislike;

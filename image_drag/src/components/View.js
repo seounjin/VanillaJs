@@ -25,10 +25,6 @@ export default class View {
 
     setEvent () {};
 
-    // setState (newState) {
-    //     this.state = {...this.state, ...newState };
-    //     this.render();
-    // };
-    
+
 
 };
