@@ -1,5 +1,5 @@
 
-const DATA = ['무도가','총잡이','전투법사','마녀','검호','흑마도사','춤꾼'];
+const DATA = ['무도가','백마도사','전투법사','마녀','검호','흑마도사','백기사'];
 
 
 export default function Job({ app }){
@@ -26,10 +26,10 @@ export default function Job({ app }){
 
 
         this.filterValue.innerHTML = 
-                    DATA.reduce((html, day) => {
+                    DATA.reduce((html, job) => {
 
-                        html += `<label> ${day} </label>
-                                <input type="checkbox" name='day' value=${day}> 
+                        html += `<label> ${job} </label>
+                                <input type="checkbox" name='job' value=${job}> 
                         
                                 `
                         return html;
