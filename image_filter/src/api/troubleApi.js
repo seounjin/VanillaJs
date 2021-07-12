@@ -4,7 +4,6 @@ import DummyData from '../model/dummyData.js';
 const request = async(query='') => {
 
     try {
-        // console.log("query", query)
         const response = query ? await DummyData.cardList(query) : await DummyData.dataList();
 
         return response;

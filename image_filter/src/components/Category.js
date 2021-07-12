@@ -24,12 +24,14 @@ export default function Category({ app, state }){
 
 
     this.setState = (newState) => {
+        // 이전상태와 비교해서 랜더링 할지 결정
+        if(newState === this.state) {  return;}
         this.state = newState;
         this.render();
     };
 
     this.render = () => {
-
+        console.log("cate",this.state);
         this.filterValue.innerHTML = 
                     this.state.reduce((html, character) => {
                         html += `<label> ${character} </label>

@@ -13,6 +13,7 @@ export default function App(app){
     this.state = {
         title:'',
         category:[],
+        cardlist:[],
     };
 
     this.target = document.createElement('form');
@@ -26,7 +27,7 @@ export default function App(app){
     const job = new Job({ app:this.target });
     const end = new End({ app:this.target });
     const buttonSection = new ButtonSection({ app:this.target });
-    const cardSection = new CardSection({ app });
+    const cardSection = new CardSection({ app, state:this.state.cardlist });
 
 
     const requestApi = async() => {
@@ -47,6 +48,7 @@ export default function App(app){
     this.setState = (newState) => {
         this.state = newState;
         category.setState(this.state.category);
+        cardSection.setState(this.state.cardlist);
     };
 
 
@@ -61,24 +63,22 @@ export default function App(app){
         const jobList = [];
         Array.from(e.target.job).map(item => { if (item.checked) {jobList.push(item.value)}});
 
-        const endValue = e.target.end.checked ? e.target.end.value : '';     
-        
+        const endValue = e.target.end.checked ? e.target.end.checked : '';     
         let query = '/card?';
 
         query += titleValue ? 'title=' + titleValue + '&' : '';
-        query += characterValue ? 'charcter=' + characterValue + '&' : '';
-        query += jobList.length !==0 ? 'job=' +  jobList.join('&job=') + '&': '';
+        query += characterValue ? 'character=' + characterValue + '&' : '';
+        query += jobList.length !== 0 ? 'job=' +  jobList.join('&job=') + '&': '';
         query += endValue ? 'op=' + endValue : '';
 
-        if (query[query.length - 1] == '&'){
+        if (query[query.length - 1] === '&'){
             query = query.slice(0,query.length - 1)
         }
 
         
         try {
             const res = await api.requestCardList(query);
-            
-            console.log("res");
+            this.setState({...this.state, cardlist:res});
         } catch (error) {
             throw new Error('submit',error);
         }
