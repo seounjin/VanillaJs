@@ -8,9 +8,11 @@ export default function ButtonSection({ app }){
 
 
     this.reset = document.createElement('input');
+    this.reset.className = 'filter-reset';
     this.reset.type = 'reset';
 
     this.submit = document.createElement('input');
+    this.submit.className = 'filter-submit';
     this.submit.type = 'submit';
 
 
