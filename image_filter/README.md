@@ -17,7 +17,7 @@
 
 ## 동작화면
 
-![image-filter](https://user-images.githubusercontent.com/39517396/125637599-fea6d88f-b54d-4acc-8ab7-ae57e321c5b9.gif)
+![filter2](https://user-images.githubusercontent.com/39517396/125640139-861d78c9-6a99-48fe-9ebb-2252ca5eb257.gif)
 
 
 ## 상세 설명
@@ -89,7 +89,7 @@ this.target.addEventListener('submit', async(e) => {
 		    
 				...
         
-			  try {
+	try {
             const res = await api.requestCardList(query);
             this.setState({...this.state, cardlist:res});
         } catch (error) {
@@ -105,7 +105,7 @@ this.target.addEventListener('submit', async(e) => {
 - 객체를 수정하지 않고 전개연산자(spread)를 사용하여 새로운 객체를 만들기 때문에 불변성을 지킬 수 있습니다.
 
 ```jsx
-		try {
+	try {
           const data = await api.requestCategory();
           this.setState({...this.state, category:data});
 
