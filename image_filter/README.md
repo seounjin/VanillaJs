@@ -111,5 +111,5 @@ this.target.addEventListener('submit', async(e) => {
 
         } catch (error) {
             throw new Error('requestApi',error);
-		    }
+	}
 ```
