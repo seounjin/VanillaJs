@@ -1,4 +1,4 @@
-# VanillaJs
+# VanillaJs Toy-Project
 
 
 - [Image-Drag](./image_drag/README.md)
