@@ -17,7 +17,6 @@
 
 ## 동작화면
 
-| 회원가입, 로그인, 로그아웃 |
 |:----------------------------------------:|
 |<img src="https://github.com/seounjin/VanillaJs/blob/main/image_collection/img/image-collection.gif" width=1000  />|
 
@@ -28,7 +27,9 @@
 
 ### 컴포넌트 구성
 
-![https://github.com/seounjin/VanillaJs/tree/main/image_collection/img/collection.png](https://github.com/seounjin/VanillaJs/tree/main/image_collection/img/collection.png)
+|:----------------------------------------:|
+|<img src="https://github.com/seounjin/VanillaJs/tree/main/image_collection/img/collection.png" width=1000  />|
+
 
 ### 함수형 컴포넌트
 
