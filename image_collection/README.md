@@ -17,8 +17,7 @@
 
 ## 동작화면
 
-|:----------------------------------------:|
-|<img src="https://github.com/seounjin/VanillaJs/blob/main/image_collection/img/image-collection.gif" width=1000  />|
+<img src="https://github.com/seounjin/VanillaJs/blob/main/image_collection/img/image-collection.gif" width=1000  />
 
 
 ## 상세 설명
@@ -27,8 +26,7 @@
 
 ### 컴포넌트 구성
 
-|:----------------------------------------:|
-|<img src="https://github.com/seounjin/VanillaJs/tree/main/image_collection/img/collection.png" width=1000  />|
+<img src="https://github.com/seounjin/VanillaJs/blob/main/image_collection/img/collection.png" width=1000  />
 
 
 ### 함수형 컴포넌트
