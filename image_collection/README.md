@@ -1,8 +1,5 @@
 # Image_Collection
 
-## Image_Collection
-
----
 
 - 프로젝트 설명: 모기업 과제를 복기한 토이프로젝트입니다.
 - 사용스택: JavaScript, HTML, CSS
