@@ -17,7 +17,7 @@ export default function ModalLoading({ app, state }) {
         
 
         this.target.innerHTML = `<div class="content">${this.state ?
-                                    `<img src=${"./img/t6.jpg"}></img>`
+                                    `<img src=${"./img/unnamed.gif"}></img>`
                                      : '' }
                                 </div>`
         
