@@ -21,8 +21,7 @@
 ## 동작화면
 
 
-<img src="https://github.com/seounjin/VanillaJs/blob/main/image_drag/img/screenshot2.gif
-" width=1000  />
+<img src="https://github.com/seounjin/VanillaJs/blob/main/image_drag/img/screenshot2.gif" width=1000  />
 
 
 ## 상세 설명
@@ -50,8 +49,7 @@
 
 ### 컴포넌트 구성
 
-<img src="https://github.com/seounjin/VanillaJs/blob/main/image_drag/img/drag.png
-" width=600  />
+<img src="https://github.com/seounjin/VanillaJs/blob/main/image_drag/img/drag.png" width=600  />
 
 - 화면이 랜더링 된 후 해야하는 작업(하위 컴포넌트를 마운트)이 있는 컴포넌트들은 View 클래스를 상속받아 생성함.
 
@@ -80,7 +78,11 @@ export default class View {
     setEvent () {};
 
 };
-```
+```- 프로젝트 설명: 인프런에서 수강한 내용 기반으로 여러가지 기능을 추가한 토이프로젝트입니다.
+113
+- 사용스택: JavaScript, HTML, CSS
+114
+- 개발환경: Ubuntu
 
 ### 투명도 적용한 메인 이미지
 
@@ -111,7 +113,7 @@ export default class View {
 
 ### 카드 애니메이션
 
-- 실제 컨네이너크기<ul>과  카드의 갯수<li> 비교함.
+- 실제 컨네이너크기 ul과 카드의 갯수li 비교함.
 - 카드 크기는 260px.
 - 컨네이너dataset 초기값 0을 할당.
 - 오른쪽 에로우버튼 클릭씨 -260
@@ -204,7 +206,6 @@ io.observe(div);
 
 ### Modal
 
----
 
 - 카드를 감싸고 있는 classList에 이벤트를 걸어놓는다.
 - 카드 클릭씨 Bubbling이 발생하여 모달이 생성되는 이벤트가 발생한다.
