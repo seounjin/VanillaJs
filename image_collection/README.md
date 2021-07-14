@@ -19,8 +19,7 @@
 
 | 회원가입, 로그인, 로그아웃 |
 |:----------------------------------------:|
-|<img src="https://user-images.githubusercontent.com/44724951/87519458-97bb3080-c6bc-11ea-9d79-49520e55c11d.gif" width=1000  />|
-
+|<img src="https://github.com/seounjin/VanillaJs/blob/main/image_collection/img/image-collection.gif" width=1000  />|
 
 
 ## 상세 설명
