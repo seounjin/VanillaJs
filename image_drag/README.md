@@ -39,7 +39,7 @@
 </section>
 
 <main>
-		<section class="section-character"></section>
+    <section class="section-character"></section>
     <section class="section-roadmap"></section>
 </main>
 
