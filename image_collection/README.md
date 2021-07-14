@@ -18,11 +18,11 @@
 ## 동작화면
 
 ![https://github.com/seounjin/VanillaJs/tree/main/image_collection/img/image-collection.png](https://github.com/seounjin/VanillaJs/tree/main/image_collection/img/image-collection.png)
----
+
 
 ## 상세 설명
 
----
+
 
 ### 컴포넌트 구성
 
