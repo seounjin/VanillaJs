@@ -26,7 +26,7 @@
 
 ### 컴포넌트 구성
 
-<img src="https://github.com/seounjin/VanillaJs/blob/main/image_collection/img/collection.png" width=1000  />
+<img src="https://github.com/seounjin/VanillaJs/blob/main/image_collection/img/collection.png" width=600  />
 
 
 ### 함수형 컴포넌트
