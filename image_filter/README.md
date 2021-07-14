@@ -17,7 +17,7 @@
 
 ## 동작화면
 
-<img src="image-filter.gif" width=1000  />
+<img src="https://github.com/seounjin/VanillaJs/blob/main/image_filter/img/image-filter.gif" width=1000  />
 
 
 ## 상세 설명
