@@ -25,7 +25,7 @@
 
 ### 컴포넌트 구성
 
-<img src="https://github.com/seounjin/VanillaJs/tree/main/image_filter/img/filter_conpoment.png" width=600  />
+<img src="https://github.com/seounjin/VanillaJs/blob/main/image_filter/img/filter_conpoment.png" width=600  />
 
 ### 함수형 컴포넌트
 
