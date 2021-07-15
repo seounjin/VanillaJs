@@ -144,12 +144,12 @@ classListContainer.style.transition = 'transform 1s';
 ```css
 @media (prefers-color-scheme: dark) {
     /* 원하는 css 사용*/
-		:root {
-        --color-mode: "dark";
-        --background: var(--color-dark);
-        --text-color: var(--color-white);
-    }
-}
+    :root {
+           --color-mode: "dark";
+           --background: var(--color-dark);
+           --text-color: var(--color-white);
+        }
+   }
 ```
 
 ```css
