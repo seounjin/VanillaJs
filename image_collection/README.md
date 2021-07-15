@@ -95,7 +95,7 @@ export default function App(app){
 
 ```jsx
 		
-		this.state = {
+    this.state = {
         root:false,
         nodes:[],
         depth:[],
