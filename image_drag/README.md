@@ -78,16 +78,13 @@ export default class View {
     setEvent () {};
 
 };
-```- 프로젝트 설명: 인프런에서 수강한 내용 기반으로 여러가지 기능을 추가한 토이프로젝트입니다.
-113
-- 사용스택: JavaScript, HTML, CSS
-114
-- 개발환경: Ubuntu
+```
 
 ### 투명도 적용한 메인 이미지
 
 - 이미지 클래스위에 컨테이너 클래스를 덮는다.
 - background-size: cover 배경에 사용하는 요소를 다 채울 수 있게 축소 되거나 확대 된다. 가로세로비율 유지.
+
 
 ```css
 .img {
