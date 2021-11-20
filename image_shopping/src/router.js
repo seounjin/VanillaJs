@@ -9,7 +9,6 @@ export const init = onRouteChange => {
 };
 
 export const routeChange = (url, params) => {
-
-    history.pushState(null ,null, url);
+    history.pushState({}, null, url);
     window.dispatchEvent(new CustomEvent('ROUTE_CHANGE', params))
 };

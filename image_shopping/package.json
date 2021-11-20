@@ -1,8 +1,8 @@
 {
-  "scripts": {
-      "dev": "lite-server"
-  },
-  "dependencies": {
-      "lite-server": "^2.6.1"
-  }
+    "scripts": {
+        "dev": "lite-server"
+    },
+    "dependencies": {
+        "lite-server": "^2.6.1"
+    }
 }
