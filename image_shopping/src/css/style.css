@@ -124,3 +124,41 @@ body {
     text-align: right;
     margin-bottom: 16px;
   }
+
+  .CartPage {
+    width: 600px;
+    margin: 0 auto;
+  }
+  
+  .Cart {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 16px;
+  }
+  
+  .Cart__item {
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+  }
+  
+  .Cart ul img {
+    width: 100px;
+    margin-right: 16px;
+  }
+  
+  .Cart__itemDesription {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .Cart__totalPrice {
+    font-size: 24px;
+    text-align: right;
+    padding-right: 16px;
+    margin-bottom: 16px;
+  }

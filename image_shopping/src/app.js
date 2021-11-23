@@ -1,5 +1,6 @@
 import ProductListPage from './page/ProductListPage.js';
 import ProductDetailPage from './page/ProductDetailPage.js';
+import CartPage from './page/CartPage.js';
 
 import { init } from './router.js';
 
@@ -16,6 +17,8 @@ export default function app(target) {
         } else if(pathname.indexOf('/products/') === 0){    
             const [ , , productId] = pathname.split('/');
             new ProductDetailPage({ app:target, productId:productId })
+        } else if(pathname === '/web/cart'){
+            new CartPage({app:target});
         }
 
     };
